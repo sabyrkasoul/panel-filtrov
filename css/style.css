@@ -247,3 +247,29 @@ body {
   outline-offset: 4px;
   transition-duration: 0s !important;
 }
+
+.filter-panel__list {
+  display: flex;
+  column-gap: 12px;
+}
+
+.filter-panel__button {
+  height: var(--button-height);
+  padding-inline: 24px;
+  font-size: 16px;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  transition-duration: var(--transition-duration);
+
+  &.is-current,
+  &:hover:not(.is-current) {
+    color: var(--color-light);
+    background-color: var(--color-accent);
+  }
+
+  &.is-current {
+    border-color: transparent;
+  }
+}
